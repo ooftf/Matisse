@@ -32,7 +32,9 @@ public class SingleMediaScanner implements MediaScannerConnection.MediaScannerCo
     }
 
     @Override public void onMediaScannerConnected() {
-        mMsc.scanFile(mPath, null);
+        if(mPath!=null){
+            mMsc.scanFile(mPath, null);
+        }
     }
 
     @Override public void onScanCompleted(String mPath, Uri mUri) {

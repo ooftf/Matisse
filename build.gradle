@@ -19,10 +19,14 @@ buildscript {
     repositories {
         jcenter()
         google()
+        repositories {
+            maven { url 'https://dl.bintray.com/ooftf/maven' }
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.1'
-        classpath 'com.novoda:bintray-release:0.9.1'
+        classpath 'com.android.tools.build:gradle:4.1.3'
+        classpath 'com.ooftf:publish-bintray:1.0.0'
+
     }
 }
 
